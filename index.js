@@ -24,7 +24,7 @@ app.use('/curriculums/:curriculumId/courses/', courseRoutes)
 /* Connect to Database*/
 const PORT = process.env.PORT || 6001
 mongoose.connect(process.env.MONGO_URL, {
-        dbName: 'exam_rest_api'
+        dbName: 'class_scheduling'
 })
 .then(() => app.listen(PORT, () => console.log('Server listening on ${PORT}')))
 .catch((error) => console.log('${error} did not connect'))
